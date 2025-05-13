@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import Header from "./components/Header";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,65 +19,15 @@ export default function RootLayout({
   return (
     <html lang="bn">
       <body className={inter.className}>
-        {/* Navigation with Glass Effect */}
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
-          <div className="container mx-auto px-4">
-            <div className="flex justify-between items-center h-20">
-              <div className="flex items-center">
-                <Link
-                  href="/"
-                  className="text-2xl font-bold text-green-600 hover:text-green-700 transition-colors duration-200"
-                >
-                  অর্ধেকদ্বীন
-                </Link>
-              </div>
-              <div className="hidden md:flex items-center space-x-8">
-                <Link
-                  href="/"
-                  className="text-gray-600 hover:text-green-600 transition-colors duration-200"
-                >
-                  হোম
-                </Link>
-                <Link
-                  href="/about"
-                  className="text-gray-600 hover:text-green-600 transition-colors duration-200"
-                >
-                  আমাদের সম্পর্কে
-                </Link>
-                <Link
-                  href="/faq"
-                  className="text-gray-600 hover:text-green-600 transition-colors duration-200"
-                >
-                  জিজ্ঞাসা
-                </Link>
-                <Link
-                  href="/guidelines"
-                  className="text-gray-600 hover:text-green-600 transition-colors duration-200"
-                >
-                  নির্দেশনা
-                </Link>
-                <Link
-                  href="/contact"
-                  className="text-gray-600 hover:text-green-600 transition-colors duration-200"
-                >
-                  যোগাযোগ
-                </Link>
-                <div className="flex items-center space-x-4">
-                  <select className="text-gray-600 hover:text-green-600 bg-transparent border-none focus:ring-0 cursor-pointer">
-                    <option>বাংলা</option>
-                    <option>English</option>
-                  </select>
-                  <button className="bg-green-500 text-white px-6 py-2 rounded-xl hover:bg-green-600 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                    লগইন
-                  </button>
-                </div>
-              </div>
-            </div>
+        {/* Hero Section with Header */}
+        <div className="relative min-h-screen bg-gradient-to-br from-green-600 via-green-500 to-green-400">
+          <div className="absolute inset-0 bg-[url('/pattern.png')] opacity-10"></div>
+          <div className="relative">
+            <Header />
+            {/* Main Content */}
+            <div className="pt-20">{children}</div>
           </div>
-        </nav>
-
-        {/* Add padding to account for fixed navbar */}
-        <div className="pt-20">{children}</div>
+        </div>
 
         {/* Footer with Modern Design */}
         <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-white py-16">
