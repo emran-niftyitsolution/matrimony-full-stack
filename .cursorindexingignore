@@ -1,0 +1,48 @@
+# Test files
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+**/__tests__/
+**/__mocks__/
+
+# Generated files
+**/generated/
+**/dist/
+**/build/
+**/.next/
+
+# Documentation
+**/docs/
+**/README.md
+**/CHANGELOG.md
+**/LICENSE
+
+# Configuration
+**/tsconfig.json
+**/next.config.js
+**/tailwind.config.js
+**/postcss.config.js
+**/jest.config.js
+**/.eslintrc.js
+**/.prettierrc
+
+# Large data files
+**/*.json
+**/*.csv
+**/*.xml
+**/*.yaml
+**/*.yml
+
+# Assets
+**/public/
+**/assets/
+**/static/
+
+# Temporary files
+**/*.tmp
+**/*.temp
+**/*.swp
+**/*.swo
+**/.DS_Store
+**/Thumbs.db 
