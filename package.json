@@ -1,0 +1,14 @@
+{
+  "name": "matrimony-full-stack",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:backend": "cd backend && npm run start:dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"wait-on tcp:5001 && npm run dev:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "wait-on": "^7.0.1"
+  }
+}
